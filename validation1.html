@@ -1,0 +1,62 @@
+<html>
+
+
+<head>
+<title>Validation Form</title>
+</head>
+
+<body>
+<h1>
+Validation Form
+</h1>
+
+
+<form name="myform" action="validation2.html"
+method="POST">
+
+First Name: <input id="fname" type = "text" pattern="[a-zA-Z0-9]+" required name = "Fname">
+<br> <br>
+Last Name: <input id="lname" type = "text" pattern="[a-zA-Z0-9]+" required name = "Lname">
+
+
+<br> <br>
+
+
+
+Gender
+
+<select>
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select>
+
+<br> <br>
+
+State
+
+<select id="state" name="State">
+  <option value="california">California</option>
+  <option value="florida">Florida</option>
+  <option value="New York">New York</option>
+  <option value="texas">Texas</option>
+  <option value="hawaii">Hawaii</option>
+  <option value="washington">Washington</option>
+  <option value="colorado">Colorado</option>
+  <option value="virginia">Virginia</option>
+  <option value="iowa">Iowa</option>
+  <option value="arizona">Arizona</option>
+</select>
+
+<script>
+localStorage.setItem("State", document.getElementById("state").value);
+</script>
+
+
+<br> <br>
+
+<button type="submit">Continue</button>
+</form>
+
+
+</body>
+</html>
